@@ -23,7 +23,7 @@ people:
     email: "shlomo@cs.umass.edu"
     categories:
       # - "Faculty"
-      - "Leadership"
+      - "Leadership & Initiative Lead"
     title: "Professor"
     description: >-
       Shlomo Zilberstein is a Professor of Computer Science and former
@@ -45,7 +45,7 @@ people:
   - name: "Kyle Hollins Wray"
     email: "kwray@umass.edu"
     categories:
-      - "Research Fellow"
+      - "Research Fellows"
       - "Leadership"
     title: "Research Fellow"
     description: >-
