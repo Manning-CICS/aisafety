@@ -59,7 +59,7 @@ people:
     website: "https://wray.ai"
     image: "content/people/images/Kyle Hollins Wray.jpg"
     office: "N/A"
-    interests: ["AI Safety", "Decision Making", "Autonomous Robotics", "Multi-Objective Models"]
+    interests: ["AI Safety", "Decision Making", "Autonomous Robotics", "Multi-Objective Models", "POMDPs"]
 
   - name: "Sujal Timilsina"
     email: "stimilsina@umass.edu"
