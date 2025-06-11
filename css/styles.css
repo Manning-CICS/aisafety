@@ -583,10 +583,56 @@ footer {
     .main-menu {
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%; /* Ensure main menu takes full width if needed */
     }
 
     .main-menu li {
-        margin: 0.5rem;
+        margin: 0; /* Remove individual li margins if 'a' tag handles all spacing */
+        width: 100%; /* Make li take full width for block-level 'a' */
+        text-align: center; /* Center text if desired */
+    }
+
+    .main-menu a { /* Applies to all direct 'a' children in .main-menu li */
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding: 0.8rem 1rem; /* Increased padding for better touch targets */
+        display: block;
+        color: var(--background-color);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: separator */
+    }
+    .main-menu li:last-child a {
+        border-bottom: none; /* Optional: remove border from last item */
+    }
+
+    .main-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Subtle hover for mobile */
+    }
+    
+    /* Mobile Dropdown Styles */
+    .main-menu .dropdown .dropdown-content {
+        display: none; /* Hidden by default */
+        position: static; /* Overrides desktop absolute positioning */
+        background-color: rgba(0,0,0,0.2); /* Slightly different background for distinction */
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        overflow: hidden; /* Clear floats if any, not strictly needed here */
+    }
+
+    .main-menu .dropdown .dropdown-content.show {
+        display: block; /* Show when .show class is added by JS */
+    }
+
+    .main-menu .dropdown .dropdown-content a {
+        color: var(--background-color); /* Ensure text color matches mobile menu */
+        padding: 0.8rem 1.5rem; /* Indent slightly more or keep consistent */
+        /* display: block; is inherited or can be re-declared */
+        /* border-top: 1px solid rgba(255,255,255,0.1); Optional: separator for dropdown items */
+    }
+    
+    .main-menu .dropdown .dropdown-content a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
     }
 
     .hero-slider {

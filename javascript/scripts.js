@@ -46,7 +46,36 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 768) {
         dropdowns.forEach(dropdown => {
             dropdown.addEventListener('click', function (e) {
-                this.querySelector('.dropdown-content').classList.toggle('show');
+                const dropdownContent = this.querySelector('.dropdown-content');
+                
+                // Determine if the click was on a link within the dropdown content
+                let clickedOnSubmenuLink = false;
+                if (dropdownContent) {
+                    const linksInDropdown = dropdownContent.querySelectorAll('a');
+                    for (const link of linksInDropdown) {
+                        if (link.contains(e.target)) {
+                            clickedOnSubmenuLink = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (clickedOnSubmenuLink) {
+                    // If click is on a submenu link, allow default navigation.
+                    // Optionally, hide the dropdown after a selection.
+                    if (dropdownContent && dropdownContent.classList.contains('show')) {
+                        // dropdownContent.classList.remove('show'); // Uncomment for auto-close
+                    }
+                    return; // Do not prevent default, do not toggle again.
+                }
+
+                // If the click was not on a submenu link (i.e., on the main toggle item or its padding):
+                // Toggle the dropdown.
+                if (dropdownContent) {
+                    dropdownContent.classList.toggle('show');
+                }
+                // Prevent default action for the main toggle link.
+                // This assumes the main link of a dropdown (e.g., "RESEARCH") should only toggle on mobile.
                 e.preventDefault();
             });
         });
