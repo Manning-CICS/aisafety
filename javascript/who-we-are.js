@@ -28,20 +28,22 @@ async function renderTeamByCategory(category, containerId) {
             container.innerHTML = `<p>No ${category.toLowerCase()} members found.</p>`;
             return;
         }
-
-        // Sort people alphabetically by last name
-        categoryPeople.sort((a, b) => {
-            // Extract last name (last word in the name)
-            const getLastName = (fullName) => {
-                if (!fullName) return '';
-                const nameParts = fullName.trim().split(/\s+/);
-                return nameParts[nameParts.length - 1].toLowerCase();
-            };
-            
-            const lastNameA = getLastName(a.name);
-            const lastNameB = getLastName(b.name);
-            return lastNameA.localeCompare(lastNameB);
-        });
+        
+        // Sort people alphabetically by last name, unless it's the 'Leadership' category
+        if (category !== 'Leadership') {
+            categoryPeople.sort((a, b) => {
+                // Extract last name (last word in the name)
+                const getLastName = (fullName) => {
+                    if (!fullName) return '';
+                    const nameParts = fullName.trim().split(/\s+/);
+                    return nameParts[nameParts.length - 1].toLowerCase();
+                };
+                
+                const lastNameA = getLastName(a.name);
+                const lastNameB = getLastName(b.name);
+                return lastNameA.localeCompare(lastNameB);
+            });
+        }
 
         // Debug: Log the sorted names to verify sorting is working
         // console.log(`${category} members sorted by last name:`, categoryPeople.map(p => p.name));
