@@ -49,8 +49,7 @@ people:
       - "Leadership"
     title: "Research Fellow"
     description: >-
-      Kyle Hollins Wray is an Research Fellow at UMass Amherst and the
-      Executive Director of the AI Safety Initiative. He leads the
+      Kyle Hollins Wray is an Research Fellow at UMass Amherst. He leads the
       creation of autonomous robots that can plan, make decisions,
       navigate, and coordinate in the real world. He also researches
       theoretical models and practical algorithms for decision-making
@@ -65,9 +64,9 @@ people:
     email: "stimilsina@umass.edu"
     categories:
       - "Leadership"
-    title: "Lead Engineer"
+    title: "Software Engineer"
     description: >-
-      Sujal Timilsina is the Lead Engineer at the AI Safety
+      Sujal Timilsina is the Software Engineer for the AI Safety
       Initiative, overseeing technical operations and engineering
       projects. His expertise lies in developing robust AI systems and
       ensuring their safe deployment in real-world applications.
