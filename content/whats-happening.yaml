@@ -6,7 +6,7 @@ banner:
 latest_news:
   - title: "Bagdasarian and Zilberstein receive Schmidt Sciences Grant"
     description: "UMass Amherst AI Safety Initiative receives major funding to advance research in AI alignment and safety protocols."
-    image: "content/artifacts/images/ai-visual.jpeg"
+    image: "content/artifacts/images/schmidt_sciences_logo.png"
     date: "2025-03-15"
     link: "news/schmidt-grant-2025.html"
 

@@ -1,7 +1,6 @@
 mission:
   title: "Mission"
-  statement: "Our mission is to ensure that advanced AI systems are developed safely, aligned with human values, and deployed for the benefit of humanity."
-  description: "The UMass Amherst AI Safety Initiative is dedicated to addressing the technical, ethical, and governance challenges associated with increasingly powerful artificial intelligence systems. We bring together researchers from computer science, mathematics, philosophy, social sciences, and policy to tackle the multifaceted challenges of AI safety."
+  statement: "The UMass AI Safety Initiative advances research to ensure the safe, secure, and ethical development of artificial intelligence. By fostering interdisciplinary collaboration and engaging external stakeholders, we promote AI systems that are aligned with human values, transparent and secure in their operation, and beneficial to society. Our mission is to serve as a hub for cutting-edge scholarship and public dialogue on AI safety, and to promote the use of AI for the common good."
   approach: "Through our interdisciplinary approach, we aim to:"
   goals:
     - text: "Develop technical approaches to ensure AI systems remain safe, robust, and aligned with human values"
