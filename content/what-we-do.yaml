@@ -34,7 +34,7 @@ research:
 
     - title: "Safe and Robust Robots"
       description: "Building autonomous robotic systems that operate safely and robustly in dynamic, unpredictable, or adversarial conditions."
-      icon: "fas fa-cogs"
+      icon: "fas fa-robot"
       link: "research.html#safe-and-robust-robots"
       authors: ["Kyle Hollins Wray", "Scott Niekum", "Hao Zhang"]
 
@@ -50,10 +50,10 @@ research:
       link: "research.html#safety-in-multi-agent-systems"
       authors: ["Shlomo Zilberstein", "Yair Zick"]
 
-    - title: "Value Alignment"
+    - title: "AI Value Alignment"
       description: "Ensuring that AI systems pursue goals aligned with human values by learning preferences, modeling intent, and handling ambiguous objectives."
       icon: "fas fa-balance-scale"
-      link: "research.html#value-alignment"
+      link: "research.html#ai-value-alignment"
       authors: ["Scott Niekum", "Eugene Bagdasarian"]
 
 #    - title: "Constitutional AI for Alignment"
