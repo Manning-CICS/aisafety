@@ -18,64 +18,100 @@ mission:
 
 research:
   title: "Research"
-  description: "Our research program focuses on developing the technical foundations and governance frameworks needed to ensure that advanced AI systems remain safe, aligned with human values, and beneficial."
+  description: "Our research program focuses on developing the technical foundations and frameworks needed to ensure that advanced AI systems remain safe, aligned with human values, and beneficial to society."
   items:
-    - title: "Constitutional AI for Alignment"
-      description: "Developing methods to train AI systems to follow constitutions - sets of principles that guide behavior - to ensure alignment with human values even as capabilities increase."
-      icon: "fas fa-brain"
-      link: "research.html#constitutional-ai"
-      authors: ["Eugene Bagdasarian", "Sarah Johnson", "David Kim"]
-    
-    - title: "Adversarial Robustness in Neural Networks"
-      description: "Creating AI systems that perform reliably under adversarial attacks and distribution shifts without unexpected failures or security vulnerabilities."
-      icon: "fas fa-shield-alt"
-      link: "research.html#robustness"
-      authors: ["Lisa Chen", "Maya Patel", "Eugene Bagdasarian"]
-    
-    - title: "Mechanistic Interpretability"
-      description: "Building tools and techniques to understand the internal workings of complex AI systems, enabling better oversight and alignment verification."
-      icon: "fas fa-search"
-      link: "research.html#interpretability"
-      authors: ["Sarah Johnson", "Alex Johnson", "David Kim"]
-    
-    - title: "AI Governance and Policy"
-      description: "Developing frameworks for responsible AI development, deployment, and regulation to ensure beneficial outcomes for society."
-      icon: "fas fa-balance-scale"
-      link: "research.html#governance"
-      authors: ["Dr. Jennifer Walsh", "Prof. Michael Chen"]
-    
     - title: "Safe Reinforcement Learning"
-      description: "Ensuring RL agents learn optimal policies while respecting safety constraints and avoiding harmful actions during both training and deployment."
+      description: "Designing algorithms that learn and act safely in uncertain environments by following user-defined constraints and minimizing harmful behavior."
+      icon: "fas fa-brain"
+      link: "research.html#safe-reinforcement-learning"
+      authors: ["Shlomo Zilberstein", "Kyle Hollins Wray", "Scott Niekum", "Philip Thomas"]
+
+    - title: "AI Privacy and Security"
+      description: "Developing methods that protect AI systems from adversarial attacks, prevent privacy leakage, and ensure secure and reliable performance."
+      icon: "fas fa-shield-alt"
+      link: "research.html#ai-privacy-and-security"
+      authors: ["Eugene Bagdasarian", "Francine Berman", "Shiqing Ma", "Amir Houmansadr"]
+
+    - title: "Safe and Robust Robots"
+      description: "Building autonomous robotic systems that operate safely and robustly in dynamic, unpredictable, or adversarial conditions."
       icon: "fas fa-cogs"
-      link: "research.html#safe-rl"
-      authors: ["David Kim", "Maya Patel", "Lisa Chen"]
-    
-    - title: "AI Safety Benchmarking"
-      description: "Creating comprehensive evaluation frameworks and benchmarks to measure AI system safety properties across various domains and capabilities."
-      icon: "fas fa-chart-line"
-      link: "research.html#benchmarking"
-      authors: ["Alex Johnson", "Eugene Bagdasarian", "Sarah Johnson"]
-    
-    - title: "Human-AI Interaction Safety"
-      description: "Studying how humans interact with AI systems to identify risks and develop interfaces that promote safe and effective collaboration."
-      icon: "fas fa-users"
-      link: "research.html#human-ai"
-      authors: ["Prof. Michael Chen", "Dr. Jennifer Walsh", "Lisa Chen"]
-    
-    - title: "Scalable Oversight Methods"
-      description: "Developing techniques to maintain effective human oversight of AI systems as they become more capable and autonomous."
+      link: "research.html#safe-and-robust-robots"
+      authors: ["Kyle Hollins Wray", "Scott Niekum", "Hao Zhang"]
+
+    - title: "Interpretability and Explainability"
+      description: "Creating techniques that make AI decisions transparent and understandable to support trust, accountability, and human oversight."
       icon: "fas fa-eye"
-      link: "research.html#oversight"
-      authors: ["Eugene Bagdasarian", "David Kim", "Maya Patel"]
-    
-    - title: "AI Value Learning"
-      description: "Research into how AI systems can learn human values from behavior, preferences, and feedback to ensure value-aligned decision making."
-      icon: "fas fa-heart"
-      link: "research.html#value-learning"
-      authors: ["Sarah Johnson", "Prof. Michael Chen", "Alex Johnson"]
-    
-    - title: "Cooperative AI Systems"
-      description: "Developing AI systems that can cooperate effectively with humans and other AI systems while maintaining safety and alignment properties."
-      icon: "fas fa-handshake"
-      link: "research.html#cooperative-ai"
-      authors: ["Dr. Jennifer Walsh", "Lisa Chen", "Eugene Bagdasarian"]
+      link: "research.html#interpretablity-and-explainability"
+      authors: ["Francine Berman", "Hao Zhang", "Yair Zick"]
+
+    - title: "Safety in Multi-Agent Systems"
+      description: "Enabling safe coordination and decision-making among multiple agents operating with limited information and uncertain environments."
+      icon: "fas fa-users"
+      link: "research.html#safety-in-multi-agent-systems"
+      authors: ["Shlomo Zilberstein", "Yair Zick"]
+
+    - title: "Value Alignment"
+      description: "Ensuring that AI systems pursue goals aligned with human values by learning preferences, modeling intent, and handling ambiguous objectives."
+      icon: "fas fa-balance-scale"
+      link: "research.html#value-alignment"
+      authors: ["Scott Niekum", "Eugene Bagdasarian"]
+
+#    - title: "Constitutional AI for Alignment"
+#      description: "Developing methods to train AI systems to follow constitutions - sets of principles that guide behavior - to ensure alignment with human values even as capabilities increase."
+#      icon: "fas fa-brain"
+#      link: "research.html#constitutional-ai"
+#      authors: ["Eugene Bagdasarian", "Sarah Johnson", "David Kim"]
+#    
+#    - title: "Adversarial Robustness in Neural Networks"
+#      description: "Creating AI systems that perform reliably under adversarial attacks and distribution shifts without unexpected failures or security vulnerabilities."
+#      icon: "fas fa-shield-alt"
+#      link: "research.html#robustness"
+#      authors: ["Lisa Chen", "Maya Patel", "Eugene Bagdasarian"]
+#    
+#    - title: "Mechanistic Interpretability"
+#      description: "Building tools and techniques to understand the internal workings of complex AI systems, enabling better oversight and alignment verification."
+#      icon: "fas fa-search"
+#      link: "research.html#interpretability"
+#      authors: ["Sarah Johnson", "Alex Johnson", "David Kim"]
+#    
+#    - title: "AI Governance and Policy"
+#      description: "Developing frameworks for responsible AI development, deployment, and regulation to ensure beneficial outcomes for society."
+#      icon: "fas fa-balance-scale"
+#      link: "research.html#governance"
+#      authors: ["Dr. Jennifer Walsh", "Prof. Michael Chen"]
+#    
+#    - title: "Safe Reinforcement Learning"
+#      description: "Ensuring RL agents learn optimal policies while respecting safety constraints and avoiding harmful actions during both training and deployment."
+#      icon: "fas fa-cogs"
+#      link: "research.html#safe-rl"
+#      authors: ["David Kim", "Maya Patel", "Lisa Chen"]
+#    
+#    - title: "AI Safety Benchmarking"
+#      description: "Creating comprehensive evaluation frameworks and benchmarks to measure AI system safety properties across various domains and capabilities."
+#      icon: "fas fa-chart-line"
+#      link: "research.html#benchmarking"
+#      authors: ["Alex Johnson", "Eugene Bagdasarian", "Sarah Johnson"]
+#    
+#    - title: "Human-AI Interaction Safety"
+#      description: "Studying how humans interact with AI systems to identify risks and develop interfaces that promote safe and effective collaboration."
+#      icon: "fas fa-users"
+#      link: "research.html#human-ai"
+#      authors: ["Prof. Michael Chen", "Dr. Jennifer Walsh", "Lisa Chen"]
+#    
+#    - title: "Scalable Oversight Methods"
+#      description: "Developing techniques to maintain effective human oversight of AI systems as they become more capable and autonomous."
+#      icon: "fas fa-eye"
+#      link: "research.html#oversight"
+#      authors: ["Eugene Bagdasarian", "David Kim", "Maya Patel"]
+#    
+#    - title: "AI Value Learning"
+#      description: "Research into how AI systems can learn human values from behavior, preferences, and feedback to ensure value-aligned decision making."
+#      icon: "fas fa-heart"
+#      link: "research.html#value-learning"
+#      authors: ["Sarah Johnson", "Prof. Michael Chen", "Alex Johnson"]
+#    
+#    - title: "Cooperative AI Systems"
+#      description: "Developing AI systems that can cooperate effectively with humans and other AI systems while maintaining safety and alignment properties."
+#      icon: "fas fa-handshake"
+#      link: "research.html#cooperative-ai"
+#      authors: ["Dr. Jennifer Walsh", "Lisa Chen", "Eugene Bagdasarian"]
