@@ -2,23 +2,6 @@ people:
   # ------------------------------------------------------------------------------------------------------------
   # ----------------------------------------------- LEADERSHIP -------------------------------------------------
   # ------------------------------------------------------------------------------------------------------------
-  - name: "Eugene Bagdasarian"
-    email: "eugene@umass.edu"
-    categories:
-      - "Leadership"
-    title: "Assistant Professor & Initiative Lead"
-    description: >-
-      Eugene's research focuses on trustworthy machine learning, with
-      an emphasis on robustness, interpretability, and alignment of AI
-      systems. He completed his PhD at Cornell Tech advised by Vitaly
-      Shmatikov and Deborah Estrin. Eugene's research was recognized
-      by Apple Scholars in AI/ML and Digital Life Initiative
-      fellowships and Usenix Security Distinguished Paper Award.
-    website: "https://people.cs.umass.edu/~eugene/"
-    image: "content/people/images/Eugene Bagdasarian.jpg"
-    office: "CS 304"
-    interests: ["Trustworthy ML", "AI Alignment", "Robustness", "Interpretability"]
-  
   - name: "Shlomo Zilberstein"
     email: "shlomo@cs.umass.edu"
     categories:
@@ -41,6 +24,23 @@ people:
     image: "content/people/images/Shlomo Zilberstein.jpg"
     office: "A359 LGRC"
     interests: ["Artificial Intelligence", "Automated Planning", "Multiagent Systems", "Autonomous Agents", "Bounded Rationality"]
+
+  - name: "Eugene Bagdasarian"
+    email: "eugene@umass.edu"
+    categories:
+      - "Leadership"
+    title: "Assistant Professor & Initiative Lead"
+    description: >-
+      Eugene's research focuses on trustworthy machine learning, with
+      an emphasis on robustness, interpretability, and alignment of AI
+      systems. He completed his PhD at Cornell Tech advised by Vitaly
+      Shmatikov and Deborah Estrin. Eugene's research was recognized
+      by Apple Scholars in AI/ML and Digital Life Initiative
+      fellowships and Usenix Security Distinguished Paper Award.
+    website: "https://people.cs.umass.edu/~eugene/"
+    image: "content/people/images/Eugene Bagdasarian.jpg"
+    office: "CS 304"
+    interests: ["Trustworthy ML", "AI Alignment", "Robustness", "Interpretability"]
 
   - name: "Kyle Hollins Wray"
     email: "kwray@umass.edu"
