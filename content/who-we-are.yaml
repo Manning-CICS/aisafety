@@ -255,6 +255,27 @@ people:
     office: "N/A"
     interests: []
 
+  - name: "Hedyeh Beyhaghi"
+    email: "hbeyhaghi@cs.umass.edu"
+    categories:
+      - "Faculty"
+    title: "Assistant Professor"
+    description: >-
+      Hedyeh Beyhaghi's research lies at the intersection of
+      algorithmic game theory, learning theory, and decision-making
+      under uncertainty. She studies strategic behavior in
+      computational systems and designs mechanisms that are robust to
+      manipulation and information asymmetries. These questions are
+      central to AI safety and alignment, especially in settings
+      involving interaction between learning agents and strategic
+      entities. Her work also addresses fairness, incentive
+      compatibility, and robustness—key dimensions of safe and
+      trustworthy AI.
+    website: "https://people.cs.umass.edu/~hbeyhaghi/"
+    image: "content/people/images/Hedyeh Beyhaghi.jpg"
+    office: "N/A"
+    interests: []
+
   # # ------------------------------------------------------------------------------------------------------------
   # # ----------------------------------------------- FACULTY ----------------------------------------------------
   # # ------------------------------------------------------------------------------------------------------------
