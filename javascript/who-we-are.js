@@ -52,6 +52,7 @@ async function renderTeamByCategory(category, containerId) {
         container.innerHTML = '';
 
         // Render each person in this category
+        // ${person.email ? `<a href="mailto:${person.email}" class="member-link"><i class="fas fa-envelope"></i> Email</a>` : ''}
         categoryPeople.forEach(person => {
             const personCard = document.createElement('div');
             personCard.className = 'team-member';
@@ -67,7 +68,7 @@ async function renderTeamByCategory(category, containerId) {
                     <p class="member-title">${person.title}</p>
                     <p class="member-bio">${person.description}</p>
                     <div class="member-links">
-                        ${person.email ? `<a href="mailto:${person.email}" class="member-link"><i class="fas fa-envelope"></i> Email</a>` : ''}
+                        
                         ${person.website ? `<a href="${person.website}" class="member-link" target="_blank"><i class="fas fa-globe"></i> Website</a>` : ''}
                     </div>
                     ${person.interests && person.interests.length > 0 ? 
