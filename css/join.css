@@ -746,6 +746,55 @@
     line-height: 1.6;
 }
 
+/* Google Form Container */
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.google-form {
+    width: 100%;
+    height: 100vh;
+    max-height: 1200px;
+    min-height: 800px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+        margin: 0 10px;
+    }
+    
+    .google-form {
+        height: 90vh;
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .google-form {
+        height: 85vh;
+        min-height: 500px;
+    }
+}
+
+/* Section header styling for the form */
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .hero-container {
