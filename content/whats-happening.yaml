@@ -8,7 +8,7 @@ latest_news:
     description: "UMass Amherst AI Safety Initiative receives major funding to advance research in AI alignment and safety protocols."
     image: "content/artifacts/images/schmidt_sciences_logo.png"
     date: "2025-03-15"
-    link: "news/schmidt-grant-2025.html"
+    link: "https://www.cics.umass.edu/news/bagdasarian-zilberstein-schmidt-sciences-grant"
 
 
 upcoming_events:
@@ -18,7 +18,7 @@ upcoming_events:
     date: "2025-02-03"
     time: "11:00 AM - 12:00 PM"
     location: "CS 142, UMass Amherst + Zoom"
-    link: "events/aisec-suri-2025.html"
+    link: "https://aisec.cs.umass.edu/"
 
   - title: "UMass AI&Sec SP'25 Seminar: Sahar Abdelnabi – Evaluating and Securing LLM‑Agentic Networks"
     description: "Sahar Abdelnabi presents evaluations of multi‑agent negotiations as dynamic benchmarks for reasoning and security."
@@ -26,7 +26,7 @@ upcoming_events:
     date: "2025-02-10"
     time: "11:00 AM - 12:00 PM"
     location: "CS 142, UMass Amherst + Zoom"
-    link: "events/aisec-abdelnabi-2025.html"
+    link: "https://aisec.cs.umass.edu/"
 
   - title: "UMass AI&Sec SP'25 Seminar: Norman Mu – System Prompt Robustness"
     description: "Norman Mu (xAI) explores robustness of system prompts in large‑scale language models."
@@ -34,7 +34,7 @@ upcoming_events:
     date: "2025-02-24"
     time: "11:00 AM - 12:00 PM"
     location: "CS 142, UMass Amherst + Zoom"
-    link: "events/aisec-mu-2025.html"
+    link: "https://aisec.cs.umass.edu/"
 
   - title: "UMass AI&Sec SP'25 Seminar: Andy Zou – Red Teaming AI Agents In‑The‑Wild"
     description: "Andy Zou demonstrates how red teaming reveals deployment vulnerabilities in AI agents."
@@ -42,7 +42,7 @@ upcoming_events:
     date: "2025-03-10"
     time: "11:00 AM - 12:00 PM"
     location: "CS 142, UMass Amherst + Zoom"
-    link: "events/aisec-zou-2025.html"
+    link: "https://aisec.cs.umass.edu/"
 
   - title: "UMass AI&Sec SP'25 Seminar: Ryan McKenna – Private Analytics and Learning at Google"
     description: "Ryan McKenna (Google) overviews privacy‑preserving analytics and federated learning at scale."
@@ -50,7 +50,7 @@ upcoming_events:
     date: "2025-04-07"
     time: "11:00 AM - 12:00 PM"
     location: "CS 142, UMass Amherst + Zoom"
-    link: "events/aisec-mckenna-2025.html"
+    link: "https://aisec.cs.umass.edu/"
 
   - title: "UMass AI&Sec SP'25 Seminar: Jonas Geiping – Increasing Trust via New Benchmarks & Model Oversight"
     description: "Jonas Geiping (ELLIS Institute) discusses benchmarking modern models and quantifying oversight limits."
@@ -58,7 +58,7 @@ upcoming_events:
     date: "2025-04-28"
     time: "11:00 AM - 12:00 PM"
     location: "CS 142, UMass Amherst + Zoom"
-    link: "events/aisec-geiping-2025.html"
+    link: "https://aisec.cs.umass.edu/"
 
 
 
