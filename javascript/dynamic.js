@@ -344,3 +344,100 @@ async function exportBibTeX() {
         alert('Failed to export BibTeX file. Please try again later.');
     }
 }
+
+/**
+ * Fetches and parses a YAML file.
+ * @param {string} url - The URL of the YAML file.
+ * @returns {Promise<object>} - A promise that resolves to the parsed YAML data.
+ */
+async function loadGlobalYamlData(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to load YAML file: ${response.statusText}`);
+        }
+        const yamlText = await response.text();
+        return jsyaml.load(yamlText);
+    } catch (error) {
+        console.error(`Error loading YAML data from ${url}:`, error);
+        return null;
+    }
+}
+
+/**
+ * Renders the navigation bar.
+ * @param {Array<object>} navItems - The navigation items data.
+ */
+function renderNavbar(navItems) {
+    const mainMenu = document.querySelector('.main-menu');
+    if (!mainMenu) return;
+
+    mainMenu.innerHTML = navItems.map(item => `
+        <li class="dropdown">
+            <a href="${item.href}">${item.name}</a>
+            ${item.dropdown ? `
+                <div class="dropdown-content">
+                    ${item.dropdown.map(subItem => `
+                        <a href="${subItem.href}" onclick="activateTab('${subItem.sectionId}'); return true;">${subItem.name}</a>
+                    `).join('')}
+                </div>
+            ` : ''}
+        </li>
+    `).join('');
+}
+
+/**
+ * Renders the footer.
+ * @param {object} footerData - The footer data.
+ */
+function renderFooter(footerData) {
+    const footerLinksContainer = document.querySelector('.footer-links');
+    const footerSocialContainer = document.querySelector('.footer-social');
+    const footerBottomContainer = document.querySelector('.footer-bottom');
+
+    if (footerLinksContainer && footerData.columns) {
+        footerLinksContainer.innerHTML = footerData.columns.map(column => `
+            <div class="footer-column">
+                <h4>${column.title}</h4>
+                <ul>
+                    ${column.links.map(link => `<li><a href="${link.href}">${link.name}</a></li>`).join('')}
+                </ul>
+            </div>
+        `).join('');
+    }
+
+    if (footerSocialContainer && footerData.socials) {
+        footerSocialContainer.innerHTML = footerData.socials.map(social => `
+            <a href="${social.href}" aria-label="${social.name}"><i class="${social.icon}"></i></a>
+        `).join('');
+    }
+
+    if (footerBottomContainer && footerData.copyright && footerData.legal) {
+        footerBottomContainer.innerHTML = `
+            <p>${footerData.copyright}</p>
+            <div class="footer-legal">
+                ${footerData.legal.map(link => `<a href="${link.href}">${link.name}</a>`).join('')}
+            </div>
+        `;
+    }
+}
+
+/**
+ * Loads and renders global content (navbar, footer) from a YAML file.
+ */
+async function loadGlobalContent() {
+    try {
+        const data = await loadGlobalYamlData('content/global.yaml');
+        if (data.navigation) {
+            renderNavbar(data.navigation);
+        }
+        if (data.footer) {
+            renderFooter(data.footer);
+        }
+    } catch (error) {
+        console.error('Error loading global content:', error);
+    }
+}
+
+// Load global content when the script is executed
+loadGlobalContent();
