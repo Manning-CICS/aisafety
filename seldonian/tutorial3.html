@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Mathjax -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  <title>AI Safety &middot; Tutorial 3</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="../index.html">AI Safety Home</a>
+      <a class="navbar-brand" href="index.html">Seldonian Home</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="overview.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../paper.html">Paper</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Tutorials
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="tutorial0.html">Tutorial Overview</a>
+            <a class="dropdown-item" href="tutorial1.html">1. Seldonian algorithm review</a>
+            <a class="dropdown-item" href="tutorial2.html">2. Example problem</a>
+            <a class="dropdown-item disabled" href="tutorial3.html">3. A simple Seldonian algorithm</a>
+            <hr>
+            <h6 class="dropdown-header text-primary"><b>C++</b></h6>
+            <a class="dropdown-item" href="tutorial4cpp.html">&nbsp;&nbsp;&nbsp;4. Coding environment setup</a>
+            <a class="dropdown-item" href="tutorial5cpp.html">&nbsp;&nbsp;&nbsp;5. Safety test</a>
+            <a class="dropdown-item" href="tutorial6cpp.html">&nbsp;&nbsp;&nbsp;6. Candidate selection</a>
+            <a class="dropdown-item" href="tutorial7cpp.html">&nbsp;&nbsp;&nbsp;7. Plotting</a>
+            <h6 class="dropdown-header text-success"><b>Python</b></h6>
+            <a class="dropdown-item" href="tutorial4py.html">&nbsp;&nbsp;&nbsp;4. Coding environment setup</a>
+            <a class="dropdown-item" href="tutorial5py.html">&nbsp;&nbsp;&nbsp;5. Safety test</a>
+            <a class="dropdown-item" href="tutorial6py.html">&nbsp;&nbsp;&nbsp;6. Candidate selection</a>
+            <a class="dropdown-item" href="tutorial7py.html">&nbsp;&nbsp;&nbsp;7. Plotting</a>
+            <hr>
+            <a class="dropdown-item" href="tutorial8.html">8. Advanced Topics</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="code.html">Code</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      </ul>
+      <!--<ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="donate.html">Donate</a>
+        </li>
+      </ul>-->
+    </nav>
+
+    <!-- Begin Content -->
+    <div class="container">
+      <div class="card bg-light mt-2">
+        <div class="card-body">
+          <h2>A Simple Seldonian Algorithm</h2>
+
+          <p align="justify">
+            Remember that we are following the three steps of the Seldonian framework:
+            <ol>
+              <li>
+                <p align="justify"><b>Define the goal for the designer of the algorithm.</b> Our goal is to create an algorithm \(a\) that attempts to maximize an objective function \(f\) and ensures that the behavioral constraints are satisfied. That is, we are searching for an algorithm \(a\) that is an approximate solution to:</p>
+                $$
+                \arg\max_{a \in \mathcal A}f(a)\\\text{s.t. }\forall i \in \{1,\dotsc,n\} \Pr(g_i(a(D)) \leq 0) \geq 1-\delta_i.
+                $$
+                <p>
+                In this example, the goal is to create a regression algorithm \(a\) that minimizes the negative MSE of the solution that \(a\) returns for the user's application. Because we do not know the value of \(f(a)\) for any \(a\) (since we do not know, for instance, to which datasets the user will apply the algorithm), we allow the user to provide a sample objective function \(\hat f:\Theta \times \mathcal D \to \mathbb R\) that acts as an estimate of the utility of any algorithm that returns the solution \(\theta\), when given input data \(D\). In our case, \(\hat f(\theta,D)=\frac{1}{n}\sum_{i=1}^n (\hat y(X_i,\theta)-Y_i)^2\).
+                </p>
+              </li>
+              <li>
+                <p align="justify">
+                  <b>Define the interface that the user will use.</b> We will begin by using an interface that makes <em>creating</em> the Seldonian algorithm easier. Our initial interface will require the user to provide functions \(\hat g_i\), as described in the previous tutorial.
+                </p>
+              </li>
+              <li align="justify"><b>Create the algorithm.</b> 
+                <p align="justify">
+                  We will implement the following algorithm. 
+                </p>
+
+                <p align="justify">
+                  First, the data \(D\) is partitioned into two sets, \(D_1\) and \(D_2\). We call \(D_1\) the <em>candidate data</em> and \(D_2\) the <em>safety data</em>. Once the data has been partitioned, a method called <em>Candidate Selection</em> uses the candidate data to pick a single solution, \(\theta_c\), called the <em>candidate solution</em>, which the algorithm considers returning. The candidate solution is then passed to the <em>Safety Test</em> mechanism, which uses the safety data to test whether the candidate solution is safe to return. If so, it is returned, and if not the algorithm returns No Solution Found (NSF).
+                </p>
+                <p>
+                   A diagram of this algorithm is provided below.
+                </p>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                      <img src="images/S15.png" class="img-fluid mx-auto d-block rounded shadow p-3 mb-5 bg-white" alt="Simple Seldonian Algorithm">
+                      <figcaption class="figure-caption"><p align="justify">Figure S15 (supplemental materials) from P. S. Thomas, B. Castro da Silva, A. G. Barto, S. Giguere, Y. Brun, and E. Brunskill. Preventing undesirable behavior of intelligent machines. <em>Science</em>, 366:999&ndash;1004, 2019. Reprinted with permission from AAAS.</p></figcaption>
+                    </div>
+                    <div class="col-md-2"></div>
+                  </div>
+                </div>
+
+                <p align="justify"><a class="text-danger"><h4>A common misconception is that this algorithm is <i>the</i> Seldonian algorithm. There is no such thing, just as there is no one algorithm that is <i>the</i> reinforcement learning algorithm. This is one example of a simple Seldonian algorithm and a simple interface.</h4></a></p>
+
+
+              </div>
+            </div>
+          </div>
+
+            <div class="container">
+              <div class="card bg-light mt-2">
+                <div class="card-body">
+                  <h2>The Safety Test Mechanism</h2>
+                
+                <p align="justify">
+                  Remember that a Seldonian algorithm ensures that, for all \(i \in \{1,2,\dotsc,n\}\),
+            $$\Pr(g_i(a(D))\leq 0)\geq 1-\delta_i.$$
+                  
+                  The <em>Safety Test</em> mechanism is the component that ensures that these <em>behavioral constraints</em> hold. It does so using data, by computing a high-confidence upper bound on each \(g_i(\theta)\) using a confidence interval derived from the Student \(t\)-statistic. If this high-confidence upper bound is less than or equal to zero for every behavioral constraint, then the candidate solution will be returned (we often say colloquially that the "solution is safe to return"); otherwise, the algorithm returns NSF. 
+                </p>
+
+                <p align="justify">
+                  The high-confidence upper bound on each \(g_i(\theta)\) is computed as follows. Let \(X=(X_1,\dotsc,X_m)\) be i.i.d. random variables. Under the assumption that \(\frac{1}{m}\sum_{i=1}^m X_i\) is normally distributed, we can use the Student \(t\)-statistic to compute an upper bound on the expected value of these random variables:
+                  $$
+                  \Pr\left (\mathbf E[X_1] \leq \hat \mu(X) + \frac{\hat \sigma(X)}{\sqrt{m}}t_{1-\delta,m-1} \right ) \geq 1-\delta,
+                  $$
+                  where 
+                  <ul>
+                    <li>\(\hat \mu(v)\) and \(\hat \sigma(v)\) are sample mean and sample standard deviation (with Bessel's correction) of a vector \(v\). That is, \(\hat  \mu(v)=1/|v|\sum_{i=1}^{|v|}v_i\) and \(\hat  \sigma(v)=\sqrt{(|v|-1)^{-1}\sum_{i=1}^{|v|}(v_i-\hat  \mu(v))^2}\), where \(|v|\) is the number of elements in \(v\); and </li>
+                    <li>\(t_{1-\delta,\nu}\) is the \(100(1-\delta)\) percentile of the Student \(t\)-distribution with \(\nu\) degrees of freedom, i.e., <kbd>tinv(\(1-\delta,\nu\))</kbd> in <a href="https://www.mathworks.com/help/stats/tinv.html">Matlab</a>.</li>
+                  </ul>
+
+                  To construct the Safety Test mechanism, first remember that:
+                  <ul>
+                    <li>We will apply the safety test to a single solution, which we call the <em>candidate solution</em>, \(\theta_c\).</li>
+                    <li>\(D_2\) is the data used by the Safety Test;</li>
+                    <li>\(\hat g_{i}(\theta_c)=(\hat g_{i,1}(\theta_c, D_2), \ldots, \hat g_{i,m}(\theta_c, D_2))\) is a vector containing \(m\) i.i.d. values of \(g_{i}(\theta_c)\); and</li>
+                    <li>\(\mathbf E[\hat g_{i,j}(\theta_c,D_2)]=g_i(\theta_c)\).</li>
+                  </ul>
+
+                  By substituting these into the high confidence upper bound discussed above, we have that
+
+                  $$
+                  \Pr\left (g_i(\theta_c) \leq \hat \mu(\hat g_i(\theta_c,D_2)) + \frac{\hat \sigma(\hat g_i(\theta_c,D_2))}{\sqrt{|D_2|}}t_{1-\delta_i,|D_2|-1} \right) \geq 1-\delta_i.
+                  $$
+
+                  This implies that, given a candidate solution \(\theta_c\) and dataset \(D_2\), \(\left( \hat \mu(\hat g_i(\theta_c,D_2)) + \frac{\hat \sigma(\hat g_i(\theta_c,D_2))}{\sqrt{|D_2|}}t_{1-\delta_i,|D_2|-1} \right) \) is a high-confidence upper bound on \(g_i(\theta_c)\). If this upper bound is less than or equal to zero, then \(g_i(\theta_c)\) is less than or equal to zero with high probability. So, the Safety Test can satisfy the behavioral constraint by only returning \(\theta_c\) when \(\left( \hat \mu(\hat g_i(\theta_c,D_2)) + \frac{\hat \sigma(\hat g_i(\theta_c,D_2))}{\sqrt{|D_2|}}t_{1-\delta_i,|D_2|-1} \right) \leq 0\).
+                  </p>
+                  <p align="justify">
+
+                  Notice that the upper bound above assumes that the vector of samples being analyzed, \(\hat \mu(X)\), is normally distributed. This is reasonable if \(m\) is sufficiently large, due to the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">central limit theorem</a>. 
+
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+            <div class="container">
+              <div class="card bg-light mt-2">
+                <div class="card-body">
+                  <h2>Computing a Candidate Solution</h2>
+                
+                <p align="justify">
+                  With the safety test in place, the algorithm will be Seldonian regardless of how the candidate solution is computed, as long as it is not computed using the data \(D_2\), which is used by the safety test. This is the reason why the algorithm splits the training data \(D\) into two sets, \(D_1\) (used to compute a candidate solution) and \(D_2\) (used to perform the safety test).
+                </p>
+                <p align="justify">
+                  First, consider what would happen if we computed a candidate solution \(\theta_c\) as follows:
+                  $$\theta_c \in \arg\max_{\theta \in \Theta}\hat f(\theta,D_1).$$
+
+                  In this case, the candidate solution would be one that performs well according to the primary objective, \(\hat f\). However, this solution often will not be safe, and will fail the safety test, resulting in the algorithm returning NSF. To fix this, we want to select a candidate solution as follows:
+
+                  $$\theta_c \in \arg\max_{\theta \in \Theta}\hat f(\theta,D_1)\\\text{s.t. $\theta_c$ predicted to pass safety test}.$$ 
+
+                  That is, we would like to only consider candidate solutions that we <em>predict</em> will pass the safety test. We can predict the result of the safety test by determining what it would return if it were to use the data set \(D_1\) (the data set used to compute the candidate solution) instead of \(D_2\):
+
+                  $$\theta_c \in \arg\max_{\theta \in \Theta}\hat f(\theta,D_1)\\\text{s.t. }\forall i \in \{1,2,\dotsc,n\},\quad \hat \mu(\hat g_i(\theta,D_1)) + \frac{\hat \sigma(\hat g_i(\theta,D_1))}{\sqrt{|D_2|}}t_{1-\delta_i,|D_2|-1}\leq 0.$$
+
+                  Notice that the upper bound used above is identical to the one used in the Safety Test, except that the relevant statistics (mean \(\hat \mu\) and standard deviation \(\hat \sigma\)) are computed over the dataset \(D_1\), that is, the data set available to compute a candidate solution. Also notice that we are still using the size of the <em>safety</em> data set in two locations above.
+                  </p>
+                  <p align="justify">
+                    The above method for computing the candidate solution can work well when the primary ojective and the behavioral constraints are aligned. However, when they are conflicting, the candidate selection mechanism tends to be over-confident that the candidate solution will pass the safety test (likely due to over-fitting on the candidate data). To fix this, we use a hack: we double the width of the confidence interval when predicting the outcome of the safety test, by multiplying the second term of the upper bound by two:
+                    $$\theta_c \in \arg\max_{\theta \in \Theta}\hat f(\theta,D_1)\\\text{s.t. }\forall i \in \{1,2,\dotsc,n\},\quad \hat \mu(\hat g_i(\theta,D_1)) + 2\frac{\hat \sigma(\hat g_i(\theta,D_1))}{\sqrt{|D_2|}}t_{1-\delta_i,|D_2|-1}\leq 0.$$
+                </p>
+              </div>
+            </div>
+          </div>
+
+            <div class="container">
+              <div class="card bg-light mt-2">
+                <div class="card-body">
+                  <h2>A Complete Algorithm</h2>
+                <p align="justify">
+                  We can now present the complete algorithm by combining the two mechanisms introduced above:
+                </p>
+
+              <div class="row bg-dark text-light">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-10">
+                    <p>
+                      <b>Inputs</b>: Feasible set \(\Theta\), data \(D\), probabilities \(\delta_1,\delta_2,\dotsc,\delta_n\), functions \(\hat g_1, \hat g_2, \dotsc, \hat g_n\), function \(\hat f\).
+                      <br>
+                      <b>Output</b>: Either a solution in \(\Theta\) or No Solution Found (NSF).
+                      <br>
+                      1. Partition \(D\) into two data sets, \(D_1\) and \(D_2\).
+                      <br>
+                      2. <b>Candidate Selection</b>: Use a black-box optimization algorithm to compute \(\theta_c\) that approximates a solution to:
+                      $$
+                      \theta_c \in \arg\max_{\theta \in \Theta} \hat f(\theta,D_1)\\
+                      \text{s.t. } \forall i \in \{1,2,\dotsc,n\}, \quad \hat \mu(\hat g_i(\theta,D_1)) + 2\frac{\hat \sigma(\hat g_i(\theta,D_1))}{\sqrt{|D_2|}}t_{1-\delta_i,|D_2|-1} \leq 0
+                      $$
+                      <br>
+                      3. <b>Safety Test</b>: Return \(\theta_c\) if
+                      $$
+                      \forall i \in \{1,2,\dotsc,n\}, \quad \hat \mu(\hat g_i(\theta_c,D_2)) + \frac{\hat \sigma(\hat g_i(\theta_c,D_2))}{\sqrt{|D_2|}}t_{1-\delta_i,|D_2|-1} \leq 0,
+                      $$
+                      and No Solution Found (NSF) otherwise.
+                    </p>
+                  </div>
+                </div>
+
+        </div>
+      </div>
+
+      <div class="card-body">
+        <a href="tutorial2.html" type="button" class="btn btn-outline-primary">Previous: Example problem</a>
+        <div class="btn-group btn-group float-right" role="group" aria-label="Next">
+          <button type="button" class="btn btn-outline-secondary float-right" disabled>Next: Coding environment setup:</button>
+          <a href="tutorial4cpp.html" type="button" class="btn btn-primary float-right">C++</a>          
+          <a href="tutorial4py.html" type="button" class="btn btn-success float-right">Python</a>          
+        </div>        
+      </div>
+
+      <hr class="my-4">
+    </div>
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
