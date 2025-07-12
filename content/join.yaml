@@ -6,9 +6,9 @@ hero:
     # - text: "Explore Opportunities"
     #   type: "primary"
       # link: "#grad-students"
-    - text: "Contact Us"
+    - text: "Join Us"
       type: "secondary"
-      link: "#contact-us"
+      link: "#join"
   image: "images/join-header.jpg"
 
 graduate_students:

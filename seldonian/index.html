@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Mathjax -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  <title>AI Safety</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="../index.html">AI Safety Home</a>
+      <a class="navbar-brand" href="#">Seldonian Home</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="overview.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../../paper.html">Paper</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Tutorials
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="tutorial0.html">Tutorial Overview</a>
+            <a class="dropdown-item" href="tutorial1.html">1. Seldonian algorithm review</a>
+            <a class="dropdown-item" href="tutorial2.html">2. Example problem</a>
+            <a class="dropdown-item" href="tutorial3.html">3. A simple Seldonian algorithm</a>
+            <hr>
+            <h6 class="dropdown-header text-primary"><b>C++</b></h6>
+            <a class="dropdown-item" href="tutorial4cpp.html">&nbsp;&nbsp;&nbsp;4. Coding environment setup</a>
+            <a class="dropdown-item" href="tutorial5cpp.html">&nbsp;&nbsp;&nbsp;5. Safety test</a>
+            <a class="dropdown-item" href="tutorial6cpp.html">&nbsp;&nbsp;&nbsp;6. Candidate selection</a>
+            <a class="dropdown-item" href="tutorial7cpp.html">&nbsp;&nbsp;&nbsp;7. Plotting</a>
+            <h6 class="dropdown-header text-success"><b>Python</b></h6>
+            <a class="dropdown-item" href="tutorial4py.html">&nbsp;&nbsp;&nbsp;4. Coding environment setup</a>
+            <a class="dropdown-item" href="tutorial5py.html">&nbsp;&nbsp;&nbsp;5. Safety test</a>
+            <a class="dropdown-item" href="tutorial6py.html">&nbsp;&nbsp;&nbsp;6. Candidate selection</a>
+            <a class="dropdown-item" href="tutorial7py.html">&nbsp;&nbsp;&nbsp;7. Plotting</a>
+            <hr>
+            <a class="dropdown-item" href="tutorial8.html">8. Advanced Topics</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="code.html">Code</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      </ul>
+      <!--<ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="donate.html">Donate</a>
+        </li>
+      </ul>-->
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">AI Safety Research </h1>
+        <p class="lead">Ensuring that Current and Future Intelligent Machines are Well-Behaved</p>
+        <hr class="my-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls>
+            <source src="videos/Seldonian.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- News -->
+    <div class="container">
+      <div class="card bg-light mt-2">
+        <div class="card-body">
+          <h2>News</h2>
+          <ul>
+            <li>
+              <b>September 2022</b>: Prof. Thomas served on a panel at the <a href="https://lp.constantcontactpages.com/cu/7PIggiL/CTAdvisoryCommittee">Briefing on the Impact of Algorithms on Civil Rights in Connecticut</a> for the Connecticut Advisory Committee to the U.S. Commission on Civil Rights.
+            </li>
+            <li>
+              <b>August 2022</b>: Our paper "Mechanizing Soundness of Off-Policy Evaluation" was published at ITP 2022 (paper <a href="https://people.cs.umass.edu/~pthomas/papers/Yeager2022.pdf">link</a>). This paper provides a machine-checked prove of some of the safety components within Seldonian reinforcement learning algorithms.
+            </li>
+            <li>
+              <b>August 2022</b>: Our paper "Enforcing Delayed-Impact Fairness Guarantees," which presents the first method for providing delayed-impact (long-term improvement in equity) guarantees when the precise relationship between model predictions and long-term impact is not known <i>a priori</i> is now available on Arxiv <a href="https://arxiv.org/pdf/2208.11744.pdf">here</a>.
+            </li>
+            <li>
+              <b>April 2022</b>: Our paper "Fairness Guarantees under Demographic Shift" was published at ICLR 2022 (paper <a href="https://people.cs.umass.edu/~pthomas/papers/Giguere2022.pdf">link</a>). This paper presents a Seldonian algorithm for fair machine learning when the demographics in the training data differ from the demographics when the machine learning model will be deployed. 
+            </li>
+            <li>
+              <b>January 2022</b>: Prof. Thomas gave a talk at the Johns Hopkins Institute for Assured Autonomy Seminar Series titled "Safe and Fair Machine Learning: A Seldonian Approach".
+            </li>
+            <li>
+              <b>Fall 2021</b>: Professors Philip Thomas and Yuriy Brun received the Google "Award for Inclusion Research" [<a href="https://research.google/outreach/air-program/recipients/">link</a>] and an award from Facebook's "Building Tools to Enhance Transparency in Fairness and Privacy" program [<a href="https://research.facebook.com/blog/2021/12/announcing-the-winners-of-the-building-tools-to-enhance-transparency-in-fairness-and-privacy-rfp/">link</a>].
+            </li>
+            <li>
+              <b>December 2021</b>: We published three papers at NeurIPS 2021 related to creating Seldonian RL algorithms: Universal Off-Policy Evaluation [<a href="https://proceedings.neurips.cc/paper/2021/file/e71e5cd119bbc5797164fb0cd7fd94a4-Paper.pdf">link</a>], SOPE: Spectrum of Off-Policy Estimators [<a href="https://proceedings.neurips.cc/paper/2021/file/9dd16e049becf4d5087c90a83fea403b-Paper.pdf">link</a>], and Multi-Objective SPIBB: Seldonian Offline Policy Improvement with Safety Constraints in Finite MDPs [<a href="https://proceedings.neurips.cc/paper/2021/file/0f65caf0a7d00afd2b87c028e88fe931-Paper.pdf">link</a>].
+            </li>
+            <li>
+              <b>December 2021</b>: Prof. Thomas gave a talk at the 2021 NeurIPS Offline Reinforcement Learning Workshop on new tools for safety tests in the reinforcement learning setting titled "Advances in (High-Confidence) Off-Policy Evaluation".
+            </li>
+            <li>
+              <b>November 2021</b>: Prof. Yuriy Brun gives a Let's Talk Tech seminar at Google, titled "Reducing Bias in Software Systems," advocating for the need for fairness research to improve ad recommendation systems.
+            </li>
+            <li>
+              <b>November 2021</b>: Prof. Thomas was an invited panelist at the Amhest College CHI Salon: "Making Robots Good People," where he discussed the need for Seldonian algorithms.
+            </li>
+            <li>
+              <b>September 2021</b>: Prof. Thomas gave a talk at the Brown BigAI Seminar titled "Safe and Fair Machine Learning: A Seldonian Approach".
+            </li>
+            <li>
+              <b>August 2021</b>: Prof. Thomas gave a talk at Google Brain (Montreal) titled "Safe and Fair Machine Learning: A Seldonian Approach".
+            </li>
+            <li>
+              <b>July 2021</b>: We published two papers at ICML 2021 related to creating Seldonian algorithms: High Confidence Generalization for Reinforcement Learning [<a href="https://people.cs.umass.edu/~pthomas/papers/Kostas2021.pdf">link</a>] and Towards Practical Mean Bounds for Small Samples [<a href="https://people.cs.umass.edu/~pthomas/papers/Phan2021.pdf">link</a>].
+            </li>
+            <li>
+              <b>May 2021:</b>: Prof. Yuriy Brun receives the 2021 IEEE CS TCSE New Directions Award for founding the research subfield of software fairness and for his advocacy for industrial uptake of software fairness testing, which has charted a roadmap for software engineering research in this new area. [<a href="https://www.umass.edu/news/article/brun-receives-ieee-2021-tcse-distinguished">link</a>]
+            </li>
+            <li>
+              <b>February 2021</b>: We published a paper at AAAI 2021 related to creating Seldonian RL algorithms: High Confidence Off-Policy (or Counterfactual) Variance Estimation [<a href="https://people.cs.umass.edu/~pthomas/papers/Chandak2021b.pdf">link</a>].
+            </li>
+            <li>
+              <b>January 2021</b>: Prof. Yuriy Brun outlines the state-of-the-art and future needs of funding in a talk titled "Engineering Software to Prevent Undesirable Behavior of Intelligent Machines" to the <a href="https://www.nitrd.gov/%5D">Networking and Information Technology Research and Development (NITRD)</a> Program Interagency Working Group on Software Productivity Sustainability Quality, an organization of major federal funding agencies, including the National Science Foundation, the Department of Defense, the Department of Energy, the Department of Commerce, the Department of Homeland Security, the Department of Justice, and NASA, among others.
+            </li>
+            <li>
+              <b>January 2021</b>: Prof. Thomas presented at the Computing and Social Justice Lecture Series at UMass Amherst, where he described the need for Seldonian algorithms in a talk titled "Why are AI Systems Racist, Sexist, and Generally Unfair, and Can We Make Them Fair?"
+            </li>
+            <li>
+              <b>December 2020</b>: We published two papers at NeurIPS 2020 related to creating Seldonian RL algorithms: Security Analysis of Safe and Seldonian Reinforcement Learning Algorithms [<a href="https://people.cs.umass.edu/~pthomas/papers/Ozisik2020.pdf">link</a>] and Towards Safe Policy Improvement for Non-Stationary MDPs [<a href="https://people.cs.umass.edu/~pthomas/papers/Chandak2020b.pdf">link</a>].
+            </li>
+            <li>
+              <b>August 2020</b>: Prof. Thomas was an invited guest on the podcast "Computing Up", for an episode titled "Channeling Hari Seldon for Safer and Fairer AI - Computing Up 38th Conversation".
+            </li>
+            <li>
+              <b>July 2020</b>: We published a paper at ICML 2020 related to creating Seldonian RL algorithms:  Optimizing for the Future in Non-Stationary MDPs [<a href="https://people.cs.umass.edu/~pthomas/papers/Chandak2020.pdf">link</a>].
+            </li>
+            <li>
+              <b>July 2020</b>: Prof. Thomas gave a talk at the Army Research Laboratory (R2AI Group) titled "Safe and Fair Machine Learning".
+            </li>
+            <li>
+              <b>February 2020</b>: <a href="https://people.cs.umass.edu/~pthomas/">Prof. Philip Thomas</a> testified to the US House Committee on Financial Services, Task Force on Artificial Intelligence, in a hearing titled "Equitable Algorithms: Examining Ways to Reduce AI Bias in Financial Services." Details can be found <a href="https://financialservices.house.gov/calendar/eventsingle.aspx?EventID=406120">here</a>, and video of the hearing is provided below.
+            </li>
+            <div align="center">
+              <iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/HdfRLDQQ8vw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+            <li>
+              <b>January 2020</b>: According to Almetric, the Science paper is now in the top 0.1% of all publications tracked by Almetric. Media coverage includes <a href="https://www.wired.com/story/researchers-guardrails-prevent-bias-ai/">Wired</a>, <a href="https://www.latimes.com/science/story/2019-11-23/fighting-bias-in-computer-algorithms">LA Times</a>, and <a href="https://espresso.economist.com/e33bff0ce02e89288c6ffe7cdd646389">The Economist</a>, as well as international coverage from <a href="https://www.agenciasinc.es/Noticias/Nuevos-algoritmos-vigilan-el-buen-comportamiento-de-la-inteligencia-artificial">Spain</a> (SINC), <a href="https://www.popmech.ru/technologies/news-526654-uchenye-razrabotali-pravilnuyu-platformu-dlya-ii/">Russia</a> (Popmech), and <a href="https://www.sohu.com/a/361651434_129720">China</a> (Sohu) among others. A partial list of coverage can be found <a href="https://www.altmetric.com/details/70944819/news">here</a>.
+            </li>
+            <li>
+                <b>December 2019</b>: We published a follow-up paper to the Science paper at the top conference NeurIPS, presenting a Seldonian algorithm for solving problems called <i>contextual bandits</i>, with example applications to loan approval and predicting criminal recidivism, as well as a user study showing how adaptive online courses powered by Seldonian algorithms can ensure that they do not disciminate against minorities in the classroom. [<a href="http://papers.nips.cc/paper/9630-offline-contextual-bandits-with-high-probability-fairness-guarantees.pdf">link</a>]
+            </li>
+            <li>
+                <b>November 2019</b>: Our paper introducing Seldonian algorithms was published in <i>Science</i> [<a href="https://science.sciencemag.org/lookup/doi/10.1126/science.aag3311">link</a>]. [Press releases <a href="https://news.stanford.edu/press/view/31224">1</a>, <a href="https://www.umass.edu/newsoffice/article/new-machine-learning-algorithms-offer">2</a>]
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-4">
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
