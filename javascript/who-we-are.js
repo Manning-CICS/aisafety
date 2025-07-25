@@ -25,7 +25,7 @@ async function renderTeamByCategory(category, containerId) {
         });
 
         if (categoryPeople.length === 0) {
-            container.innerHTML = `<p>No ${category.toLowerCase()} members found.</p>`;
+            container.innerHTML = `<p>No ${category.toLowerCase()} members have been added to the site at this time.</p>`;
             return;
         }
         
