@@ -165,12 +165,12 @@ function renderResearchItems(limit = null) {
                     </div>
                 </div>
             ` : ''}
-            <div class="research-item-footer">
-                <a href="${item.link}" class="research-learn-more">
-                    Learn More <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
         `;
+    // <div class="research-item-footer">
+    //     <a href="${item.link}" class="research-learn-more">
+    //         Learn More <i class="fas fa-arrow-right"></i>
+    //     </a>
+    // </div>
 
         container.appendChild(itemElement);
     });

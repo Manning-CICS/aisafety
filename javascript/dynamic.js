@@ -344,3 +344,138 @@ async function exportBibTeX() {
         alert('Failed to export BibTeX file. Please try again later.');
     }
 }
+
+/**
+ * Renders the navigation bar from global.yaml data.
+ * @param {Array<object>} navItems - The navigation items data from global.yaml.
+ */
+function renderNavbar(navItems) {
+    const mainMenu = document.querySelector('.main-menu');
+    if (!mainMenu) return;
+
+    mainMenu.innerHTML = navItems.map(item => `
+        <li class="dropdown">
+            <a href="${item.href}">${item.name}</a>
+            ${item.dropdown ? `
+                <div class="dropdown-content ${item.dropdown.length > 4 ? 'wider-dropdown' : ''}">
+                    ${item.dropdown.map(subItem => `
+                        <a href="${subItem.href}" onclick="activateTab('${subItem.sectionId}'); return true;">${subItem.name}</a>
+                    `).join('')}
+                </div>
+            ` : ''}
+        </li>
+    `).join('');
+
+    // Re-initialize mobile dropdown functionality after rendering
+    initializeMobileDropdowns();
+}
+
+/**
+ * Renders the footer from global.yaml data.
+ * @param {object} footerData - The footer data from global.yaml.
+ */
+function renderFooter(footerData) {
+    const footerLinksContainer = document.querySelector('.footer-links');
+    const footerSocialContainer = document.querySelector('.footer-social');
+    const footerBottomContainer = document.querySelector('.footer-bottom');
+
+    // Render footer columns
+    if (footerLinksContainer && footerData.columns) {
+        footerLinksContainer.innerHTML = footerData.columns.map(column => `
+            <div class="footer-column">
+                <h4>${column.title}</h4>
+                <ul>
+                    ${column.links.map(link => `<li><a href="${link.href}">${link.name}</a></li>`).join('')}
+                </ul>
+            </div>
+        `).join('');
+    }
+
+    // Render social media links
+    if (footerSocialContainer && footerData.socials && footerData.socials.length > 0) {
+        footerSocialContainer.innerHTML = footerData.socials.map(social => `
+            <a href="${social.href}" aria-label="${social.name}"><i class="${social.icon}"></i></a>
+        `).join('');
+    }
+
+    // Render footer bottom content
+    if (footerBottomContainer && footerData.copyright && footerData.legal) {
+        footerBottomContainer.innerHTML = `
+            <p>${footerData.copyright}</p>
+            <div class="footer-legal">
+                ${footerData.legal.map(link => `<a href="${link.href}">${link.name}</a>`).join('')}
+            </div>
+        `;
+    }
+}
+
+/**
+ * Initializes mobile dropdown functionality for the dynamically loaded navigation.
+ */
+function initializeMobileDropdowns() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    // Add click event for mobile devices
+    if (window.innerWidth <= 768) {
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function (e) {
+                const dropdownContent = this.querySelector('.dropdown-content');
+                
+                // Determine if the click was on a link within the dropdown content
+                let clickedOnSubmenuLink = false;
+                if (dropdownContent) {
+                    const linksInDropdown = dropdownContent.querySelectorAll('a');
+                    for (const link of linksInDropdown) {
+                        if (link.contains(e.target)) {
+                            clickedOnSubmenuLink = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (clickedOnSubmenuLink) {
+                    // If click is on a submenu link, allow default navigation
+                    return;
+                }
+
+                // Toggle the dropdown for main navigation items
+                if (dropdownContent) {
+                    dropdownContent.classList.toggle('show');
+                }
+                e.preventDefault();
+            });
+        });
+    }
+}
+
+/**
+ * Loads and renders global content (navbar, footer) from global.yaml.
+ */
+async function loadGlobalContent() {
+    try {
+        const data = await loadYamlData('global.yaml');
+        if (!data) {
+            console.error('Global content data not found');
+            return;
+        }
+
+        // Render navigation if data exists
+        if (data.navigation) {
+            renderNavbar(data.navigation);
+        }
+
+        // Render footer if data exists
+        if (data.footer) {
+            renderFooter(data.footer);
+        }
+
+        console.log('Global content loaded successfully');
+    } catch (error) {
+        console.error('Error loading global content:', error);
+    }
+}
+
+// Initialize global content loading when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    loadGlobalContent();
+});
