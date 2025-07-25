@@ -12,198 +12,136 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html" class="logo-link">
-            <div class="logo-container">
-                <img src="images/umass-logo.png" alt="UMass Amherst Logo" class="logo">
-                <div class="logo-text">
-                    <h1>UMass Amherst</h1>
-                    <h2>AI Safety Initiative</h2>
-                </div>
-            </div>
-        </a>
-        <nav>
-            <ul class="main-menu">
-                <li class="dropdown">
-                    <a href="whats-happening.html">WHAT'S HAPPENING</a>
-                    <div class="dropdown-content">
-                        <a href="whats-happening.html#news" onclick="activateTab('news'); return true;">NEWS</a>
-                        <a href="whats-happening.html#events" onclick="activateTab('events'); return true;">EVENTS</a>
+        <header>
+            <a href="index.html" class="logo-link">
+                <div class="logo-container">
+                    <img src="images/umass-logo.png" alt="UMass Amherst Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>UMass Amherst</h1>
+                        <h2>AI Safety Initiative</h2>
                     </div>
-                </li>
-                <li class="dropdown">
-                    <a href="who-we-are.html">WHO WE ARE</a>
-                    <div class="dropdown-content">
-                        <a href="who-we-are.html#leadership" onclick="activateTab('leadership'); return true;">LEADERSHIP</a>
-                        <a href="who-we-are.html#faculty" onclick="activateTab('faculty'); return true;">FACULTY</a>
-                        <a href="who-we-are.html#research-fellows" onclick="activateTab('research-fellows'); return true;">RESEARCH FELLOWS</a>
-                        <a href="who-we-are.html#students" onclick="activateTab('students'); return true;">STUDENTS</a>
-                        <a href="who-we-are.html#funding" onclick="activateTab('funding'); return true;">OUR FUNDING</a>
+                </div>
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <!-- Navigation items will be loaded dynamically -->
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Shaping the Future of AI Safety</h1>
+                <p>Welcome to the UMass Amherst AI Safety Initiative, where we conduct cutting-edge research to ensure that
+                    advanced AI systems benefit humanity.</p>
+                <div class="hero-buttons">
+                    <a href="what-we-do.html" class="primary-button">Our Mission</a>
+                    <a href="join.html" class="secondary-button">Get Involved</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="key-areas">
+            <div class="container">
+                <h2 class="section-title">Our Focus Areas</h2>
+                <div class="areas-grid">
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Alignment</h3>
+                        <p>Ensuring AI systems act in accordance with human values and intentions.</p>
+                        <a href="what-we-do.html#research" class="learn-more">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                </li>
-                <li class="dropdown">
-                    <a href="what-we-do.html">WHAT WE DO</a>
-                    <div class="dropdown-content">
-                        <a href="what-we-do.html#mission" onclick="activateTab('mission'); return true;">MISSION</a>
-                        <a href="what-we-do.html#research" onclick="activateTab('research'); return true;">RESEARCH</a>
-                        <a href="what-we-do.html#publications"
-                            onclick="activateTab('publications'); return true;">PUBLICATIONS</a>
+
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Robustness</h3>
+                        <p>Developing AI systems that perform reliably even in unexpected situations.</p>
+                        <a href="what-we-do.html#research" class="learn-more">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                </li>
-                <li class="dropdown">
-                    <a href="join.html">JOIN US</a>
-                    <div class="dropdown-content wider-dropdown">
-                        <a href="join.html#contact-us" onclick="activateTab('contact-us'); return true;">JOIN US</a>
+
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Interpretability</h3>
+                        <p>Making AI systems more transparent and understandable to humans.</p>
+                        <a href="what-we-do.html#research" class="learn-more">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Shaping the Future of AI Safety</h1>
-            <p>Welcome to the UMass Amherst AI Safety Initiative, where we conduct cutting-edge research to ensure that
-                advanced AI systems benefit humanity.</p>
-            <div class="hero-buttons">
-                <a href="what-we-do.html" class="primary-button">Our Mission</a>
-                <a href="join.html" class="secondary-button">Get Involved</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="key-areas">
-        <div class="container">
-            <h2 class="section-title">Our Focus Areas</h2>
-            <div class="areas-grid">
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-robot"></i>
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Governance</h3>
+                        <p>Developing frameworks for responsible AI development and deployment.</p>
+                        <a href="what-we-do.html#research" class="learn-more">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>AI Alignment</h3>
-                    <p>Ensuring AI systems act in accordance with human values and intentions.</p>
-                    <a href="what-we-do.html#research" class="learn-more">Learn More <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
+            </div>
+        </section>
 
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-shield-alt"></i>
+        <section class="latest-news">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest News & Events</h2>
+                    <a href="whats-happening.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- News and events will be dynamically loaded from whats happening -->
+                <div id="news-grid-container" class="news-grid">
+                    <!-- Loading animation -->
+                    <div class="loading-indicator">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading news and events...</p>
                     </div>
-                    <h3>Robustness</h3>
-                    <p>Developing AI systems that perform reliably even in unexpected situations.</p>
-                    <a href="what-we-do.html#research" class="learn-more">Learn More <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
+            </div>
+        </section>
 
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-search"></i>
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join Our Mission</h2>
+                    <p>Help us shape the future of AI safety through research, education, and collaboration.</p>
+                    <div class="cta-buttons">
+                        <a href="join.html" class="primary-button">Get Involved</a>
+                        <!-- <a href="join.html#mailing-list" class="secondary-button">Join Mailing List</a> -->
                     </div>
-                    <h3>Interpretability</h3>
-                    <p>Making AI systems more transparent and understandable to humans.</p>
-                    <a href="what-we-do.html#research" class="learn-more">Learn More <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
+            </div>
+        </section>
 
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-balance-scale"></i>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/umass-logo.png" alt="UMass Amherst Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">
+                        <h3>UMass Amherst</h3>
+                        <h4>AI Safety Initiative</h4>
                     </div>
-                    <h3>Governance</h3>
-                    <p>Developing frameworks for responsible AI development and deployment.</p>
-                    <a href="what-we-do.html#research" class="learn-more">Learn More <i
-                            class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="footer-links">
+                    <!-- Footer links will be loaded dynamically -->
+                </div>
+                <div class="footer-social">
+                    <!-- Social media links will be loaded dynamically -->
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="footer-bottom">
+                <!-- Footer bottom content will be loaded dynamically -->
+            </div>
+        </footer>
 
-    <section class="latest-news">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest News & Events</h2>
-                <a href="whats-happening.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <!-- News and events will be dynamically loaded from whats happening -->
-            <div id="news-grid-container" class="news-grid">
-                <!-- Loading animation -->
-                <div class="loading-indicator">
-                    <i class="fas fa-spinner fa-spin"></i>
-                    <p>Loading news and events...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Join Our Mission</h2>
-                <p>Help us shape the future of AI safety through research, education, and collaboration.</p>
-                <div class="cta-buttons">
-                    <a href="join.html" class="primary-button">Get Involved</a>
-                    <!-- <a href="join.html#mailing-list" class="secondary-button">Join Mailing List</a> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/umass-logo.png" alt="UMass Amherst Logo" class="footer-logo-img">
-                <div class="footer-logo-text">
-                    <h3>UMass Amherst</h3>
-                    <h4>AI Safety Initiative</h4>
-                </div>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="what-we-do.html#mission">Mission</a></li>
-                        <li><a href="who-we-are.html#community">Our Community</a></li>
-                        <li><a href="who-we-are.html#funding">Funding</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="datasets.html">Datasets</a></li>
-                        <li><a href="software.html">Software</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="join.html#mailing-list">Join Mailing List</a></li>
-                        <li><a href="join.html#get-involved">Support Our Work</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-social">
-                <!--a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a-->
-                <!--a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a-->
-                <!--a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a-->
-                <!--a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a-->
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 UMass Amherst AI Safety Initiative. All rights reserved.</p>
-            <div class="footer-legal">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="accessibility.html">Accessibility</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="javascript/scripts.js"></script>
-    <script src="javascript/index.js"></script>
-    <script src="javascript/dynamic.js"></script>
-</body>
-
+        <script src="javascript/scripts.js"></script>
+        <script src="javascript/dynamic.js"></script>
+        <script src="javascript/index.js"></script>
+    </body>
 </html>
+    

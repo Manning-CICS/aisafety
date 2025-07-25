@@ -136,6 +136,7 @@ header {
     text-decoration: none;
     display: block;
     transition: background-color 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .dropdown-content a:hover {
@@ -145,6 +146,12 @@ header {
 
 .wider-dropdown {
     min-width: 280px;
+    right: 0;
+    left: auto;
+}
+
+/* Align dropdown of the last nav item to the right to prevent overflow */
+.main-menu > li:last-child > .dropdown-content {
     right: 0;
     left: auto;
 }
