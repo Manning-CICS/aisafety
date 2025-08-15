@@ -276,6 +276,88 @@ people:
     office: "N/A"
     interests: []
 
+  - name: "Bruno Castro da Silva"
+    email: "bsilva@cs.umass.edu"
+    categories:
+      - "Faculty"
+    title: "Assistant Professor"
+    description: >-
+      Bruno Castro da Silva's research focuses on safe reinforcement
+      learning, safe multi-objective RL, and safety and robustness in
+      robotics and control. His work addresses critical challenges in
+      developing policies that can adapt to new sets of preferences
+      and priorities over objectives, synthesizing zero-shot policies
+      that are both optimal with respect to specified preferences and
+      guaranteed to be safe with high confidence. His research
+      contributes to ensuring AI systems can operate safely and
+      effectively in dynamic environments where objectives and safety
+      requirements may change.
+    website: "https://cs.umass.edu/~bsilva/"
+    image: "content/people/images/Bruno Castro da Silva.jpg"
+    office: "N/A"
+    interests: []
+
+  - name: "Brian Levine"
+    email: "blevine@cs.umass.edu"
+    categories:
+      - "Faculty"
+    title: "Professor"
+    description: >-
+      Brian Levine's research focuses on thwarting internet-based
+      crimes against children. Increasingly AI represents both a
+      threat to children's safety and a tool in the hands of
+      investigators and those who would rescue them. His research
+      examines both cases, investigating how AI can be used to protect
+      vulnerable populations while also addressing the risks AI poses
+      to children's safety online.
+    website: "https://rescue-lab.org"
+    image: "content/people/images/Brian Levine.jpg"
+    office: "N/A"
+    interests: []
+
+  - name: "Daniel Sheldon"
+    email: "sheldon@cs.umass.edu"
+    categories:
+      - "Faculty"
+    title: "Professor"
+    description: >-
+      Daniel Sheldon is a Professor of Computer Science at UMass
+      Amherst. His research spans a broad range of topics in AI and
+      scientific discovery. In the area of AI safety, he investigates
+      practical and principled approaches to privacy-preserving data
+      analysis, enabling AI systems to safely operate on users' data.
+      He also develops novel Bayesian models and inference algorithms,
+      which lie at the heart of an AI system's ability to quantify
+      uncertainty and make decisions.
+    website: "https://people.cs.umass.edu/~sheldon/"
+    image: "content/people/images/Dan Sheldon.jpg"
+    office: "N/A"
+    interests: []
+
+  - name: "Ben Marlin"
+    email: "marlin@cs.umass.edu"
+    categories:
+      - "Faculty"
+    title: "Professor"
+    description: >-
+      Benjamin M. Marlin is a professor in the Manning College of
+      Information and Computer Sciences at the University of
+      Massachusetts Amherst. His research focuses on the development
+      of machine learning models and algorithms that are both robust
+      and efficient. His foundational work touches on multiple aspects
+      of robustness that are relevant to AI safety including
+      robustness to uncertainty, missing data, and domain shifts, as
+      well as multiple aspects of efficiency including data
+      efficiency, computational scalability, and communication
+      efficiency. His applied research focuses on multiple
+      safety-critical, real-world application domains and machine
+      learning deployment contexts including clinical and mobile
+      health, embedded systems, and the Internet of Things.
+    website: "https://groups.cs.umass.edu/marlin/"
+    image: "content/people/images/Ben Marlin.png"
+    office: "N/A"
+    interests: []
+
   # # ------------------------------------------------------------------------------------------------------------
   # # ----------------------------------------------- FACULTY ----------------------------------------------------
   # # ------------------------------------------------------------------------------------------------------------
