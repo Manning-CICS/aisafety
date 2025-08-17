@@ -207,6 +207,11 @@
     position: relative;
 }
 
+.section-header a {
+    color: #0074d9;
+    text-decoration: underline;
+}
+
 .section-header h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;

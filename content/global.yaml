@@ -52,24 +52,24 @@ footer:
           href: "what-we-do.html#mission"
         - name: "Our Community"
           href: "who-we-are.html"
-        - name: "Funding"
-          href: "who-we-are.html#funding"
+        # - name: "Funding"
+        #   href: "who-we-are.html#funding"
     - title: "Resources"
       links:
         - name: "Publications"
           href: "publications.html"
-        - name: "Datasets"
-          href: "#" # Placeholder
-        - name: "Software"
-          href: "#" # Placeholder
+        # - name: "Datasets"
+        #   href: "#" # Placeholder
+        # - name: "Software"
+        #   href: "#" # Placeholder
     - title: "Connect"
       links:
         - name: "Contact Us"
           href: "join.html"
         - name: "Join Mailing List"
           href: "join.html"
-        - name: "Support Our Work"
-          href: "#" # Placeholder
+        # - name: "Support Our Work"
+        #   href: "#" # Placeholder
   # socials:
   #   - name: "Twitter"
   #     href: "#"
