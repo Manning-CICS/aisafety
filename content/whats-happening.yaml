@@ -16,7 +16,7 @@ upcoming_events:
     description: "Ilia Shumailov discusses moving beyond model performance to inspect its untrusted origins and explore how today's ML pipelines are a fertile ground for problems."
     image: "content/artifacts/images/cics_security.png"
     date: "2025-09-08"
-    time: "10:00 AM - 11:00 PM"
+    time: "10:00 AM - 11:00 AM"
     location: "CS 142, UMass Amherst + Zoom"
     link: "https://aisec.cs.umass.edu/seminar/"
   
