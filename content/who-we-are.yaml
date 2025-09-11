@@ -364,8 +364,16 @@ people:
       - "Faculty"
     title: "Assistant Professor"
     description: >-
-      I work on advanced cryptography with emerging applications to AI safety. 
-      Examples includes secure aggregation and watermarking for large language models.
+      Professor Adam O’Neil specializes in advanced cryptography, with a 
+      particular emphasis on emerging applications in AI safety. 
+      His research explores secure aggregation techniques and watermarking 
+      methods for large language models, aiming to enhance the privacy, 
+      integrity, and accountability of AI systems. Professor O’Neil’s work 
+      bridges theoretical foundations with practical implementations, contributing 
+      to the development of robust security protocols that address the unique 
+      challenges posed by modern artificial intelligence. Through interdisciplinary 
+      collaboration, he advances the field of cryptography to support safer and 
+      more trustworthy AI technologies.
     website: "https://groups.cs.umass.edu/oneill/"
     image: "content/people/images/Anonymous.png"
     office: "N/A"
