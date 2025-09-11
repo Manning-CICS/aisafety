@@ -358,6 +358,19 @@ people:
     office: "N/A"
     interests: []
 
+  - name: "Adam O’Neill"
+    email: "adamo@cs.umass.edu"
+    categories:
+      - "Faculty"
+    title: "Assistant Professor"
+    description: >-
+      I work on advanced cryptography with emerging applications to AI safety. 
+      Examples includes secure aggregation and watermarking for large language models.
+    website: "https://groups.cs.umass.edu/oneill/"
+    image: "content/people/images/Anonymous.png"
+    office: "N/A"
+    interests: []
+
   # # ------------------------------------------------------------------------------------------------------------
   # # ----------------------------------------------- FACULTY ----------------------------------------------------
   # # ------------------------------------------------------------------------------------------------------------
