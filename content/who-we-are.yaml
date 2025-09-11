@@ -368,12 +368,7 @@ people:
       particular emphasis on emerging applications in AI safety. 
       His research explores secure aggregation techniques and watermarking 
       methods for large language models, aiming to enhance the privacy, 
-      integrity, and accountability of AI systems. Professor O’Neil’s work 
-      bridges theoretical foundations with practical implementations, contributing 
-      to the development of robust security protocols that address the unique 
-      challenges posed by modern artificial intelligence. Through interdisciplinary 
-      collaboration, he advances the field of cryptography to support safer and 
-      more trustworthy AI technologies.
+      integrity, and accountability of AI systems.
     website: "https://groups.cs.umass.edu/oneill/"
     image: "content/people/images/Anonymous.png"
     office: "N/A"
