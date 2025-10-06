@@ -12,18 +12,9 @@ latest_news:
 
 
 upcoming_events:
-  - title: "UMass AISec FA'25 Seminar: Benjamin Laufer (Cornell Tech) – AI Ecosystems: Structure, Strategy, Risk and Regulation"
-    description: "The development of artificial intelligence is increasingly shaped by interactions between general-purpose model creators, downstream fine-tuners, regulators, and open-source communities. In this talk, Benjamin presents a line of recent work that develops formal and empirical approaches to understanding these dynamics."
+  - title: "UMass AISec FA'25 Seminar on AI Safety, Privacy, and Security"
+    description: "Join our weekly seminar where we invite experts in AI safety and security to give talks. Speakers include: Ilia Shumailov, Benjamin Laufer, Ambra Demontis, Arman Zharmagambetov, Madiha Choksi, Rebecca Portnoff, Tingwei Zhang, Kathrin Grosse, Saeed Mahloujifar, Matthew Wright, Ali Naseh, Cassidy Gibson."
     image: "content/artifacts/images/cics_security.png"
-    date: "2025-09-15"
-    time: "10:00 AM - 11:00 AM"
-    location: "CS 142, UMass Amherst + Zoom"
-    link: "https://aisec.cs.umass.edu/seminar/"
-  
-  - title: "UMass AISec FA'25 Seminar: Ilia Shumailov (Google Deepmind) – Beyond model.generate(): Can I Even Tell What Is Going On and Why It Matters"
-    description: "Ilia Shumailov discusses moving beyond model performance to inspect its untrusted origins and explore how today's ML pipelines are a fertile ground for problems."
-    image: "content/artifacts/images/cics_security.png"
-    date: "2025-09-08"
     time: "10:00 AM - 11:00 AM"
     location: "CS 142, UMass Amherst + Zoom"
     link: "https://aisec.cs.umass.edu/seminar/"
