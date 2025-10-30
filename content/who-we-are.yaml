@@ -334,6 +334,27 @@ people:
     office: "N/A"
     interests: []
 
+  - name: "Prashant Shenoy"
+    email: "shenoy@cs.umass.edu"
+    categories:
+      - "Faculty"
+    title: "Distinguished Professor"
+    description: >-
+      Prashant Shenoy is a Distinguished Professor of Computer Science
+      at UMass Amherst. His research interests lie broadly in
+      distributed systems and networking. He heads the Laboratory for
+      Advanced Systems Software here at UMass where we focus on
+      building systems and understand them through modeling, analysis
+      and experimentation. His research interests lie broadly in
+      distributed systems and networking. He heads the Laboratory for
+      Advanced Systems Software here at UMass where we focus on
+      building systems and understand them through modeling, analysis
+      and experimentation.
+    website: "https://people.cs.umass.edu/~shenoy/"
+    image: "content/people/images/Prashant Shenoy.jpg"
+    office: "N/A"
+    interests: []
+
   - name: "Ben Marlin"
     email: "marlin@cs.umass.edu"
     categories:
@@ -358,19 +379,19 @@ people:
     office: "N/A"
     interests: []
 
-  - name: "Adam O’Neill"
+  - name: "Adam O'Neill"
     email: "adamo@cs.umass.edu"
     categories:
       - "Faculty"
     title: "Assistant Professor"
     description: >-
-      Professor Adam O’Neil specializes in advanced cryptography, with a 
+      Professor Adam O'Neill specializes in advanced cryptography, with a
       particular emphasis on emerging applications in AI safety. 
       His research explores secure aggregation techniques and watermarking 
       methods for large language models, aiming to enhance the privacy, 
       integrity, and accountability of AI systems.
     website: "https://groups.cs.umass.edu/oneill/"
-    image: "content/people/images/Anonymous.png"
+    image: "content/people/images/Adam O'Neill.jpg"
     office: "N/A"
     interests: []
 
