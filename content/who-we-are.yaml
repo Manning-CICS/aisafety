@@ -41,6 +41,22 @@ people:
     image: "content/people/images/Eugene Bagdasarian.jpg"
     office: "CS 304"
     interests: ["Trustworthy ML", "AI Alignment", "Robustness", "Interpretability"]
+  - name: "Oliver Daniels"
+    email: "odaniels@umass.edu"
+    categories:
+      - "Leadership"
+      - "Students"
+    title: "PhD Student & Initiative Student Lead"
+    description: >-
+      Oliver's research is currently focused on using weak language models to "decode" 
+      the activations of strong language models. More broadly, his research aims to 
+      reduce catastrophic risks from advanced misaligned AI systems. Oliver also leads 
+      the AI Safety reading group at UMass.
+    
+    website: "https://oliveradk.github.io/"
+    image: "content/people/images/Oliver Daniels.jpg"
+    office: "N/A"
+    interests: ["Interpretability", "Generalization", "Alignment"]
 
   - name: "Kyle Hollins Wray"
     email: "kwray@umass.edu"
